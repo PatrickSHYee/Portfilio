@@ -1,0 +1,28 @@
+﻿/*
+    Name: Strap it up
+    Version: 1
+    Developer: Patrick S. Yee
+   Description: Based on the Youplay's game template based on Bootstrap made for this site.
+*/
+.social-list::after, .social-list:before, .timeline .timeline-block, .panination:after, .panination:before, .timeline:before{
+    content: '';
+}
+body, html {
+    height: 100%;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    background: rgba(10, 10, 10, 0.9);
+}
+
+/* Navbar */
+.navbar-strapItUp {
+    border: none;
+    min-height: 50px;
+    background: rgba(10, 10, 10, 0.4);
+    -o-transition: 0.3s background ease;
+    transition: 0.3s background ease;
+}
