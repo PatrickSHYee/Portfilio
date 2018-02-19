@@ -3,40 +3,116 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Patrick S. Yee</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
     <link rel="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css" />
     <link rel="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-strapItUp navbar-fixed-top">
+    <!-- Navbar -->
+    <div class="navbar-youplay navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                @*<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">*@
+                <button type="button" class="navbar-toggle collapsed" data-toggle="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a href=@Url.Action("Index", "Home") class="navbar-brand" style="margin:0; color:#fff; float: left;">
+                    <i class="fas fa-gamepad"></i>
+                    Patrick S. Yee
+                </a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>
+                        <a href=@Url.Action("About", "Home")>
+                            About
+                            <span class="label">Software Engineer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href=@Url.Action("Resume", "Home")>
+                            Resume
+                            <span class="label">Skills</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href=@Url.Action("Projects", "Home")>
+                            Projects
+                            <span class="label">Apps, Websites, & Hobbies</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href=@Url.Action("Index", "Blog")>
+                            News
+                            <span class="label">Blog</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown dropdown-hover dropdown-cart">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <i class="fas fa-envelope-square" style="font-size: 3em"></i>
+                        </a>
+                        <div class="dropdown-menu pb-20" style="width: 400px">
+                            <div class="block-content ml-20 mr-20 mnb-10">
+                                <div class="lwa lwa-default">
+                                    <form class="block-content" action="" method="post">
+                                        <label>Name:</label>
+                                        <div class="youplay-input">
+                                            <input type="text" name="username" />
+                                        </div>
+                                        <label>Message:</label>
+                                        <div class="youplay-input">
+                                            <textarea id="message" name="message" placeholder="Write message..." rows="5" cols="50"></textarea>
+                                        </div>
+                                        <button class="btn btn-sm ml-0 mr-0" name="submit" id="lwa_wp_submit" tabindex="100">Send</button>
+                                    </form>
+                                    <hr />
+                                    <div style="display: inline;">
+                                        <span style="text-align:center">
+                                            patrickshyee@gmail.com<br />
+                                            720.938.0710
+                                        </span>
+                                        <div style="float:right">
+                                            <a href="https://www.facebook.com/5k3l3t0r" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#fff'">
+                                                <i class="fab fa-facebook" style="font-size:3em"></i>
+                                            </a>
+                                            <a href="https://www.linkedin.com/in/patrick-yee-57856524/" onmouseover="this.style.color='#0077b5'" onmouseout="this.style.color='#fff'">
+                                                <i class="fab fa-linkedin" style="font-size:3em"></i>
+                                            </a>
+                                            <a href="https://www.twitch.tv/5k3l3t0r/" onmouseout="this.style.color='#fff'" onmouseover="this.style.color='#4b307b'">
+                                                <i class="fab fa-twitch" style="font-size:3em"></i>
+                                            </a>
+                                            <a href="https://www.instagram.com/patrickshyee/" onmouseover="this.style.color='#000'" onmouseout="this.style.color='#fff'">
+                                                <i class="fab fa-instagram" style="font-size:3em"></i>
+                                            </a>
+                                            <a href="https://twitter.com/5k3l3t0r_CS" onmouseover="this.style.color='#00aced'" onmouseout="this.style.color='#fff'">
+                                                <i class="fab fa-twitter" style="font-size:3em"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <section class="content-wrap">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Patrick S. Yee</p>
         </footer>
-    </div>
+    </section>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

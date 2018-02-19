@@ -6,3 +6,16 @@
     padding-left: 15px;
     padding-right: 15px
 }
+
+.navbar-youplay a{
+    color: #fff;
+    display: inline;
+}
+
+.fb a {
+    font-size: 3em;
+}
+
+.fb a:hover{
+    color: #3b5998;
+}

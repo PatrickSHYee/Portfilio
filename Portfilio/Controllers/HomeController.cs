@@ -26,5 +26,12 @@ namespace Portfilio.Controllers
 
             return View();
         }
+
+        public ActionResult Projects()
+        {
+            ViewBag.Message = "A collection of projects and work that Patrick have been part of and/or been working on.";
+
+            return View();
+        }
     }
 }
