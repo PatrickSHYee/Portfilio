@@ -21,8 +21,13 @@ namespace Portfilio
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js",
-                      "~/Scripts/youplay.js"));
+                      "~/Scripts/respond.js"
+                      ));
+
+            bundles.Add(new ScriptBundle("~/bundles/javascript").Include(
+                "~/Scripts/youplay.js",
+                "~/Scripts/main.js"
+                ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

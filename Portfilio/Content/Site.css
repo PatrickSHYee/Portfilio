@@ -19,3 +19,9 @@
 .fb a:hover{
     color: #3b5998;
 }
+
+.mfp-title {
+    position: absolute;
+    color: #ffffff;
+    background: #ff0000;
+}

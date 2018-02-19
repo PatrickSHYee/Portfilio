@@ -7,8 +7,8 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
-    <link rel="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css" />
-    <link rel="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
@@ -58,7 +58,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown dropdown-hover dropdown-cart">
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <i class="fas fa-envelope-square" style="font-size: 3em"></i>
+                            <i class="fas fa-envelope-square" style="font-size: 2em"></i>
                         </a>
                         <div class="dropdown-menu pb-20" style="width: 400px">
                             <div class="block-content ml-20 mr-20 mnb-10">
@@ -94,7 +94,7 @@
                                                 <i class="fab fa-instagram" style="font-size:3em"></i>
                                             </a>
                                             <a href="https://twitter.com/5k3l3t0r_CS" onmouseover="this.style.color='#00aced'" onmouseout="this.style.color='#fff'">
-                                                <i class="fab fa-twitter" style="font-size:3em"></i>
+                                                <i class="fab fa-twitter" style="font-size: 3em"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -118,6 +118,7 @@
     @Scripts.Render("~/bundles/bootstrap")
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    @Scripts.Render("~/bundles/javascript")
     @RenderSection("scripts", required: false)
 </body>
 </html>
